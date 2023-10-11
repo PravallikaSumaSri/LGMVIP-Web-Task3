@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    <link rel="stylesheet" href="Registration.css">
+</head>
+<body>
+    <div id="form-container">
+        <h1>Student Enrollment Form</h1><br><br>
+        <form id="enrollmentForm">
+            <b>
+                <label for="name">Name:</label>                                                              
+                <input type="text" id="name" name="name" placeholder="Enter Name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" required><br><br>
+
+                <label for="website">Profile:</label>
+                <input type="url" id="website" name="website" placeholder="Enter linkedIn profile URL" required><br><br>
+
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image" accept="image/*" required><br><br>
+
+                <label for="gender">Gender:</label><br><br>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>&nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>&nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label><br><br>
+
+                <label for="skills">Skills:</label><br><br>
+                <input type="checkbox" id="java" name="skills" value="Java">
+                <label for="java">Java</label>&nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="checkbox" id="html" name="skills" value="HTML">
+                <label for="html">HTML</label>&nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="checkbox" id="css" name="skills" value="CSS">
+                <label for="css">CSS</label>&nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+                <label for="javascript">JavaScript</label><br><br></b>
+
+                <input type="button" value="Enroll Student" onclick="addStudent()"> &nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="reset" value="Clear Form">
+            </form>
+        </div>
+
+        <div class="vertical-line"></div> <!-- Vertical line separator -->
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th colspan="3" id="enrolled-heading">Enrolled Students :</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </tbody>
+        </table>
+
+        <script src="Registration.js"></script>
+    </body>
+</html>
